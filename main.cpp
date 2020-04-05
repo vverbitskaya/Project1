@@ -1,19 +1,19 @@
 #include <iostream>
 
-struct car {
+struct Car {
     std::string number;
 };
 
 struct LinkedListNode {
     LinkedListNode* next;
     LinkedListNode* prev;
-    car value;
+    Car value;
 };
 
 struct LinkedList {
     LinkedList() : root(nullptr) {}
     
-    void push(car v) {
+    void push(Car v) {
         if(root == nullptr) {
             LinkedListNode* node = new LinkedListNode();
             node->value = v;
@@ -55,10 +55,10 @@ struct LinkedList {
 int main() {
     LinkedList list;
     
-    car car1;
+    Car car1;
     car1.number = "A571HH_26";
 
-    car car2;
+    Car car2;
     car2.number = "B132OP_26";
         
     list.push(car1);
