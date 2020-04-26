@@ -7,13 +7,14 @@ class Content {
 public:
 	virtual bool Load(const std::string& path) = 0;
 	virtual void PrintContent() = 0;
+	virtual void Clear() = 0;
 };
 
 class AnalyseResult {
 public:
 	virtual bool IsValid() = 0;
 
-	virtual void printResult() = 0; // TODO [Pedus] : need to think about export results
+	virtual void printResult(size_t min_frequency, size_t max_frequency) = 0; // TODO [Pedus] : need to think about export results
 };
 
 class ContentAnalyser {
